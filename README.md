@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Development Site
 
-## Getting Started
+<p align="center">
+  <img src="https://img.shields.io/badge/%20%20%F0%9F%A6%84%F0%9F%8C%88-made%20with%20love-ce068b.svg" alt="made with love" />
+  <a href="https://travis-ci.com/DHedgecock/danhedgecock">
+    <img src="https://travis-ci.com/DHedgecock/danhedgecock.svg?branch=master" alt="build status">
+  </a>
+  <a href="https://dashboard.cypress.io/#/projects/ma3dkn/runs">
+    <img src="https://img.shields.io/badge/cypress-dashboard-brightgreen.svg" alt="Cypress Dashboard">
+  </a>
+  <a href="https://codeclimate.com/github/DHedgecock/danhedgecock/maintainability">
+    <img src="https://api.codeclimate.com/v1/badges/a621b79ba64efb73ea87/maintainability" />
+  </a>
+</p>
 
-First, run the development server:
+_Personal dev project for trying new tech and ideas, check it out!_
 
-```bash
-npm run dev
-# or
-yarn dev
+## Workflows
+
+### Developing
+
+Install dependencies then start the webpack development server:
+
+```sh
+npm install
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+During development linter warnings are logged and errors will show the error
+overlay screen. Run the unit tests in watch mode and a system notification will
+show if changes break existing tests:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```sh
+npm run test:watch
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Start the Cypress test runner in ??? mode to create acceptance tests:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```sh
+npm run cypress:run
+```
 
-## Learn More
+ℹ️ The NGINX container run during the `test:acceptance` command expects a
+production build of the app to exist in `/public`. If you get a `403: Forbidden`
+response from NGINX, run the build command then rerun the acceptance tests.
 
-To learn more about Next.js, take a look at the following resources:
+Build hecka rad features 🦄🌈🎉
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Storybook development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Initial component work is done in Storybook for sandboxed development. This
+encourages flexible layout and API conventions and speeds up iteration.
 
-## Deploy on Vercel
+```sh
+npm run storybook
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Continuous integration and deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Before pushing a branch run tests. The test script will lint source code with
+ESLint, then run unit tests with Jest, then run acceptance tests with Cypress
+(Docker is required to run the acceptance tests with Docker Compose):
+
+```sh
+npm test
+```
+
+Pushed branches are tested by Travis CI. After merging to master Travis CI will
+test, then build, then deploy the changes.
+
+_Travis builds can be skipped by starting a commit with `[skip ci]`_
+
+### Tools
+
+#### VSCode
+
+- Autocomplete and intellisense for modules that are relatively imported are
+  supported with the `jsconfig.json` config file.
+- Project includes a debug config to launch a Chrome session for interactive
+  debugging.
+
+## Thank you 🙇‍♂️
+
+- Project icon from [The Graphics Fairy](https://thegraphicsfairy.com/)

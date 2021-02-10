@@ -1,0 +1,23 @@
+name: Test on Push
+
+on: [push]
+
+jobs:
+  test-on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install
+        uses: actions/npm@master
+        with:
+          args: ci
+        env:
+          CI: true
+      - name: Lint
+        uses: actions/npm@master
+        with:
+          args: run test:lint
+      - name: Unit test
+        uses: actions/npm@master
+        with:
+          args: run test:unit

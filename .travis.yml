@@ -1,0 +1,50 @@
+language: node_js
+node_js:
+  - '10'
+
+services:
+  - docker
+
+# Skip npm install for Docker workflow
+install: true
+
+# Setup Code Climate test reporter
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+# Script phase tests and builds application assets
+script:
+  # Initial image build -> lint, then unit test then build prod assets
+  # Build the base app image, including linting and unit testing
+  - docker build -t dhedgecock/danhedgecock .
+  # Copy code coverage files into host for Code Climate test coverage reporting
+  - docker run --rm -v $(pwd)/coverage:/tmp dhedgecock/danhedgecock cp -a /usr/src/app/coverage/. /tmp/
+  # Run the container to build the app assets, mounting the /public directories
+  # so that build outputs are included in Travis context
+  - docker run -v $(pwd)/public:/usr/src/app/public dhedgecock/danhedgecock
+  # With Docker Compose use Nginx+built assets and Cypress to acceptance test
+  - docker-compose -f docker-compose.yml -f docker-compose.ci.yml up --exit-code-from cypress --abort-on-container-exit
+
+# Call Code Climate reporter with results, note the --prefix option is used to
+# strip the file paths output from the Docker container
+after_script:
+  - ./cc-test-reporter after-build --prefix /usr/src/app --exit-code $TRAVIS_TEST_RESULT
+# Deploy configs to push to S3 bucket
+# deploy:
+#   provider: s3
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: $AWS_SECRET_KEY
+#   bucket: danhedgecock
+#   skip_cleanup: true
+#   region: us-west-2
+#   # Only deploy build output
+#   local_dir: dist
+#   # Set gzip and expiration cnfigs
+#   detect_encoding: true
+#   cache_control: 'max-age=31536000'
+#   # Only deploy on push to master
+#   on:
+#     branch: master

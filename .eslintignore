@@ -1,0 +1,3 @@
+# Directories starting with . are ignored by default, use negated match to tell
+# ESLint we WANT this directory linted
+!/.storybook

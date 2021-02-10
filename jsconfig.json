@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // Handles the /src addition webpack module resolver
+      "*": ["*", "src/*"],
+      // Handles the @ alias added to webpack
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules", "public"]
+}

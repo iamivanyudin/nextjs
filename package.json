@@ -1,62 +1,62 @@
-  {
-    "name": "iamivanyudin",
-    "version": "0.0.0",
-    "description": "Totally rad testing ground",
-    "keywords": [],
-    "author": "Ivan Yudin",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/iamivanyudin/iamivanyudin.git"
-    },
-    "scripts": {
-      "start": "NODE_ENV=development webpack-dev-server --mode=development",
-      "build": "NODE_ENV=production webpack --mode=production",
-      "test": "npm run test:lint && npm run test:unit && npm run test:acceptance",
-      "test:acceptance": "docker-compose up --exit-code-from cypress --abort-on-container-exit",
-      "test:lint": "NODE_ENV=test eslint --format=pretty .storybook cypress src test",
-      "test:unit": "NODE_ENV=test jest",
-      "test:watch": "JEST_NOTIFY=true NODE_ENV=test jest --watch",
-      "cypress:open": "cypress open",
-      "cypress:run": "cypress run",
-      "format": "prettier --write '*.{md,js,json,yml}' '**/*.{html,md,js,json,scss,yml}'",
-      "postinstall": ". ./scripts/post-install.sh",
-      "storybook": "start-storybook -p 6006 --ci"
-    },
-    "dependencies": {
-      "@babel/runtime": "7.5.5",
-      "@babel/runtime-corejs3": "7.5.5",
-      "componentry": "3.0.0-alpha.12",
-      "core-js": "3.2.1",
-      "react": "16.9.0",
-      "react-dom": "16.9.0",
-      "react-progressive-image-loading": "3.0.3",
-      "svg-symbol-sprite-loader": "3.2.0"
-    },
-    "devDependencies": {
-      "@crystal-ball/commit-semantics": "1.2.0",
-      "@crystal-ball/prettier-base": "1.4.0",
-      "@crystal-ball/webpack-base": "5.3.0",
-      "@storybook/addon-actions": "5.1.11",
-      "@storybook/addon-knobs": "5.1.11",
-      "@storybook/addon-links": "5.1.11",
-      "@storybook/react": "5.1.11",
-      "@storybook/theming": "5.1.11",
-      "@testing-library/jest-dom": "4.1.0",
-      "@testing-library/react": "9.1.3",
-      "eslint-config-eloquence": "12.4.0",
-      "husky": "3.0.5",
-      "jest": "24.9.0"
-    },
-    "config": {
-      "commitizen": {
-        "path": "@crystal-ball/commitizen-adapter"
-      }
-    },
-    "husky": {
-      "hooks": {
-        "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
-      }
-    },
-    "prettier": "@crystal-ball/prettier-base"
-  }
+{
+  "name": "danhedgecock",
+  "version": "0.0.0",
+  "description": "Totally rad testing ground",
+  "keywords": [],
+  "author": "Dan Hedgecock",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DHedgecock/danhedgecock.git"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --mode=development",
+    "build": "NODE_ENV=production webpack --mode=production",
+    "test": "npm run test:lint && npm run test:unit && npm run test:acceptance",
+    "test:acceptance": "docker-compose up --exit-code-from cypress --abort-on-container-exit",
+    "test:lint": "NODE_ENV=test eslint --format=pretty .storybook cypress src test",
+    "test:unit": "NODE_ENV=test jest",
+    "test:watch": "JEST_NOTIFY=true NODE_ENV=test jest --watch",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "format": "prettier --write '*.{md,js,json,yml}' '**/*.{html,md,js,json,scss,yml}'",
+    "postinstall": ". ./scripts/post-install.sh",
+    "storybook": "start-storybook -p 6006 --ci"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.5.5",
+    "@babel/runtime-corejs3": "7.5.5",
+    "componentry": "3.0.0-alpha.12",
+    "core-js": "3.2.1",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-progressive-image-loading": "3.0.3",
+    "svg-symbol-sprite-loader": "3.2.0"
+  },
+  "devDependencies": {
+    "@crystal-ball/commit-semantics": "1.2.0",
+    "@crystal-ball/prettier-base": "1.4.0",
+    "@crystal-ball/webpack-base": "5.3.0",
+    "@storybook/addon-actions": "5.1.11",
+    "@storybook/addon-knobs": "5.1.11",
+    "@storybook/addon-links": "5.1.11",
+    "@storybook/react": "5.1.11",
+    "@storybook/theming": "5.1.11",
+    "@testing-library/jest-dom": "4.1.0",
+    "@testing-library/react": "9.1.3",
+    "eslint-config-eloquence": "12.4.0",
+    "husky": "3.0.5",
+    "jest": "24.9.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@crystal-ball/commitizen-adapter"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
+    }
+  },
+  "prettier": "@crystal-ball/prettier-base"
+}
