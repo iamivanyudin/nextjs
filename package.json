@@ -50,7 +50,7 @@
     },
     "config": {
       "commitizen": {
-        //"path": "@crystal-ball/commitizen-adapter"
+        "path": "@crystal-ball/commitizen-adapter"
       }
     },
     "husky": {
@@ -58,5 +58,5 @@
         "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
       }
     },
-    //"prettier": "@crystal-ball/prettier-base"
+    "prettier": "@crystal-ball/prettier-base"
   }
