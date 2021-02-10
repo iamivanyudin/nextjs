@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> Renders the application container 1`] = `
+<div
+  class="d-flex flex-column min-100vh"
+>
+  <div
+    alt="mountains from the air"
+    class="section-background"
+    style="background-image: url(mocked/image.png); background-size: cover; position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; filter: blur(10px); transition: filter 500ms ease;"
+  />
+  <div
+    class="d-flex flex-column justify-content-between"
+  >
+    <div
+      class="d-flex flex-column align-items-center justify-content-around"
+    >
+      <div
+        class="message-card p-5 text-center mt-3 mt-lg-5"
+      >
+        <h1
+          data-testid="welcome-text"
+        >
+          Hello
+           
+          <span
+            aria-label="wave"
+            role="img"
+          >
+            👋
+          </span>
+        </h1>
+        <h3>
+          You caught me in the middle of trying out some fun new ideas
+           
+          <span
+            aria-label="oh no"
+            role="img"
+          >
+            😱
+          </span>
+          , please check back soon!
+        </h3>
+        <div
+          class="mt-4"
+        >
+          <a
+            href="https://github.com/DHedgecock"
+          >
+            <svg
+              class="icon icon-github font h2 mb-0 mx-1"
+              role="img"
+            >
+              <use
+                href="#github"
+                xlink:href="#github"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/danhedgecock/"
+          >
+            <svg
+              class="icon icon-linkedin font h2 mb-0 mx-1"
+              role="img"
+            >
+              <use
+                href="#linkedin"
+                xlink:href="#linkedin"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div
+        class="message-card p-5 text-center mt-3 mt-lg-5"
+      >
+        <h1>
+          Now running CI/CD
+           
+          <span
+            aria-label="tada"
+            role="img"
+          >
+            🎉
+          </span>
+        </h1>
+        <h3>
+          This app is linted, unit tested, and acceptance tested in Travis CI and deployed on change to master by Zeit
+          <span
+            aria-label="mindblown"
+            role="img"
+          >
+            🤯
+          </span>
+          .
+        </h3>
+        <a
+          href="https://travis-ci.com/DHedgecock/danhedgecock"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="build status"
+            src="https://travis-ci.com/DHedgecock/danhedgecock.svg?branch=master"
+          />
+        </a>
+      </div>
+      <div
+        class="message-card p-5 text-center mt-3 mt-lg-5"
+      >
+        <h1>
+          Now testing with Cypress
+           
+          <span
+            aria-label="green checkmark"
+            role="img"
+          >
+            ✅
+          </span>
+        </h1>
+        <h3>
+          This app is acceptance tested with Cypress and really just for funesies the test output is included as status checks and PR comments using a Cypress Project Dashboard and Github Integration.
+        </h3>
+        <a
+          href="https://dashboard.cypress.io/#/projects/ma3dkn/runs"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Cypress Dashboard"
+            src="https://img.shields.io/badge/cypress-dashboard-brightgreen.svg"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      class="p-3 text-right w-100"
+    >
+      <a
+        class="anchor text-gray-500"
+        href="https://unsplash.com/@dertomek"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Background image courtesty of Tomek Kaczmarek - Unsplash
+      </a>
+    </div>
+  </div>
+</div>
+`;
