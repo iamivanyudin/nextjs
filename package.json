@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "description": "Totally rad testing ground",
   "keywords": [],
-  "author": "iamivanyudin",
+  "author": "Ivan Yudin",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamivanyudin/iamivanyudin.git"
+    "url": "https://github.com/IamIvanYudin/iamivanyudin.git"
   },
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --mode=development",

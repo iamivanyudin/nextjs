@@ -45,7 +45,7 @@ const LandingScreen = () => (
             , please check back soon!
           </h3>
           <div className='mt-4'>
-            <a href='https://github.com/iamivanyudin'>
+            <a href='https://github.com/IamIvanYudin'>
               <Icon id='github' className='h2 mb-0 mx-1' />
             </a>
             <a href='https://www.linkedin.com/in/iamivanyudin/'>
@@ -70,12 +70,12 @@ const LandingScreen = () => (
             .
           </h3>
           <a
-            href='https://travis-ci.com/iamivanyudin/iamivanyudin'
+            href='https://travis-ci.com/IamIvanYudin/iamivanyudin'
             target='_blank'
             rel='noopener noreferrer'
           >
             <img
-              src='https://travis-ci.com/iamivanyudin/iamivanyudin.svg?branch=master'
+              src='https://travis-ci.com/IamIvanYudin/iamivanyudin.svg?branch=master'
               alt='build status'
             />
           </a>

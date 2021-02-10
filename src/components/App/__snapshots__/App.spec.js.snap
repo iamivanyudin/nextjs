@@ -45,7 +45,7 @@ exports[`<App /> Renders the application container 1`] = `
           class="mt-4"
         >
           <a
-            href="https://github.com/iamivanyudin"
+            href="https://github.com/IamIvanYudin"
           >
             <svg
               class="icon icon-github font h2 mb-0 mx-1"
@@ -96,13 +96,13 @@ exports[`<App /> Renders the application container 1`] = `
           .
         </h3>
         <a
-          href="https://travis-ci.com/iamivanyudin/iamivanyudin"
+          href="https://travis-ci.com/IamIvanYudin/iamivanyudin"
           rel="noopener noreferrer"
           target="_blank"
         >
           <img
             alt="build status"
-            src="https://travis-ci.com/iamivanyudin/iamivanyudin.svg?branch=master"
+            src="https://travis-ci.com/IamIvanYudin/iamivanyudin.svg?branch=master"
           />
         </a>
       </div>

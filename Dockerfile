@@ -1,7 +1,7 @@
 # Dockerfile is used primarily for running tests and building in CI/CD
 
 FROM node:10-alpine as base
-LABEL maintainer="iamivamyudin@outlook.com"
+LABEL maintainer="iamivanyudin@gmail.com"
 
 WORKDIR /usr/src/app
 
