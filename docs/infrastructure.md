@@ -11,12 +11,12 @@ distribution.
    nameservers set to AWS Route 53 DNS nameservers.
 1. AWS Route 53 DNS - A _hosted zone_ in Route 53 has the following DNS records
    configured:
-   - A record that aliases `danhedgecock.com` to the Cloudfront distribution url
+   - A record that aliases `iamivanyudin.com` to the Cloudfront distribution url
      `xxx.cloudfront.net`
-   - A record that aliases `www.danhedgecock.com` to `danhedgecock.com`
+   - A record that aliases `www.iamivanyudin.com` to `iamivanyudin.com`
      (required for www. subdomain)
-   - CNAME record for ACM certificate DNS validation of danhedgecock.com
-   - CNAME record for ACM certificate DNS validation of www.danhedgecock.com
+   - CNAME record for ACM certificate DNS validation of iamivanyudin.com
+   - CNAME record for ACM certificate DNS validation of www.iamivanyudin.com
    - NS record for nameservers
    - SOA record (start of authority)
 1. AWS Cloudfront distribution - CDN with edge locations all over the world to

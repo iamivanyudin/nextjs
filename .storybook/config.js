@@ -10,7 +10,7 @@ addParameters({
   options: {
     showPanel: false,
     theme: {
-      brandTitle: 'Dan Hedgecock',
+      brandTitle: 'iamivanyudin',
       ...themes.dark,
     },
   },

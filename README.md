@@ -2,13 +2,14 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/%20%20%F0%9F%A6%84%F0%9F%8C%88-made%20with%20love-ce068b.svg" alt="made with love" />
-  <a href="https://travis-ci.com/DHedgecock/danhedgecock">
-    <img src="https://travis-ci.com/DHedgecock/danhedgecock.svg?branch=master" alt="build status">
+  <a href="https://travis-ci.com/iamivanyudin/iamivanyudin
+">
+    <img src="https://travis-ci.com/iamivanyudin/iamivanyudin.svg?branch=master" alt="build status">
   </a>
   <a href="https://dashboard.cypress.io/#/projects/ma3dkn/runs">
     <img src="https://img.shields.io/badge/cypress-dashboard-brightgreen.svg" alt="Cypress Dashboard">
   </a>
-  <a href="https://codeclimate.com/github/DHedgecock/danhedgecock/maintainability">
+  <a href="https://codeclimate.com/github/iamivanyudin/iamivanyudin/maintainability">
     <img src="https://api.codeclimate.com/v1/badges/a621b79ba64efb73ea87/maintainability" />
   </a>
 </p>

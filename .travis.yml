@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '10'
+  - "10"
 
 services:
   - docker
@@ -18,12 +18,12 @@ before_script:
 script:
   # Initial image build -> lint, then unit test then build prod assets
   # Build the base app image, including linting and unit testing
-  - docker build -t dhedgecock/danhedgecock .
+  - docker build -t iamivanyudin/iamivanyudin .
   # Copy code coverage files into host for Code Climate test coverage reporting
-  - docker run --rm -v $(pwd)/coverage:/tmp dhedgecock/danhedgecock cp -a /usr/src/app/coverage/. /tmp/
+  - docker run --rm -v $(pwd)/coverage:/tmp iamivanyudin/iamivanyudin cp -a /usr/src/app/coverage/. /tmp/
   # Run the container to build the app assets, mounting the /public directories
   # so that build outputs are included in Travis context
-  - docker run -v $(pwd)/public:/usr/src/app/public dhedgecock/danhedgecock
+  - docker run -v $(pwd)/public:/usr/src/app/public iamivanyudin/iamivanyudin
   # With Docker Compose use Nginx+built assets and Cypress to acceptance test
   - docker-compose -f docker-compose.yml -f docker-compose.ci.yml up --exit-code-from cypress --abort-on-container-exit
 
@@ -37,7 +37,7 @@ after_script:
 #   access_key_id: $AWS_ACCESS_KEY
 #   secret_access_key:
 #     secure: $AWS_SECRET_KEY
-#   bucket: danhedgecock
+#   bucket: iamivanyudin
 #   skip_cleanup: true
 #   region: us-west-2
 #   # Only deploy build output

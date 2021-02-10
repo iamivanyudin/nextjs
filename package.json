@@ -1,13 +1,13 @@
 {
-  "name": "danhedgecock",
+  "name": "iamivanyudin",
   "version": "0.0.0",
   "description": "Totally rad testing ground",
   "keywords": [],
-  "author": "Dan Hedgecock",
+  "author": "iamivanyudin",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DHedgecock/danhedgecock.git"
+    "url": "https://github.com/iamivanyudin/iamivanyudin.git"
   },
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --mode=development",
